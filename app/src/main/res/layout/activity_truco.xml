@@ -252,5 +252,16 @@
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/editar"
+        app:layout_constraintEnd_toStartOf="@+id/ResetarIcone"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
