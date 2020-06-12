@@ -3,16 +3,20 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#000839</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="ColorRed">#B22222</color>
-    <color name="ColorBlue">#1E90FF</color>
+    <color name="ColorRed">#cd6155</color>
+    <color name="ColorBlue">#5dade2</color>
     <color name="ColorWhite">#FFF</color>
     <color name="ColorPastelUm">#F0F8FF</color>
     <color name="ColorPastelTres">#F8F8FF</color>
     <color name="ColorPastelSeis">#FFFAFA</color>
     <color name="ColorPastelNove">#FFF5EE</color>
     <color name="ColorPastelDoze">#FFFAF0</color>
-    <color name="Vitoria">#f4d03f</color>
+    <color name="Vitoria">#fcf3cf</color>
     <color name="Preto">#000</color>
-    <color name="VerdeEscuro"> #145a32 </color>
+    <color name="VerdeEscuro">#52be80</color>
+    <color name="salmao">#fdebd0</color>
+
+    <color name="azulclaro">#d6eaf8</color>
+    <color name="vermelhoclaro">#f2d7d5</color>
 
 </resources>

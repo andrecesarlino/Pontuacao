@@ -61,6 +61,17 @@ public class Truco extends AppCompatActivity {
     private Button Reset;
 
 
+    // Editar
+    private TextView InputTimeAEditar;
+    private TextView InputTimeBEditar;
+    private TextView TimeAEditar;
+    private TextView TimeBEditar;
+    private Button Editar;
+    Dialog TelaEditar;
+    private TextView EditarTruco;
+
+
+
 
 
     @Override
@@ -69,6 +80,8 @@ public class Truco extends AppCompatActivity {
         setContentView(R.layout.activity_truco);
 
         testeDialogo = new Dialog(this);
+
+        TelaEditar = new Dialog(this);
 
 
         JogadorUm = findViewById(R.id.JogadorUm);
@@ -102,8 +115,48 @@ public class Truco extends AppCompatActivity {
         MarcoUm.setText(JogadorUmPontuacao);
         MarcoDois.setText(JogadorDoisPontuacao);
 
+        //button editar
+
         ResetarIcone = findViewById(R.id.ResetarIcone);
 
+
+        //button editar
+        EditarTruco = findViewById(R.id.EditarTruco);
+
+
+
+
+        ResetarIcone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PtsUm = "0";
+                PtsDois = "0";
+                PontuacaoJogadorUm.setText("0");
+                PontuacaoJogadorDois.setText("0");
+                count = 0;
+            }
+        });
+
+
+        EditarTruco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditarPlacar();
+            }
+        });
+
+        PontuacaoJogadorUm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditarPlacar();
+            }
+        });
+        PontuacaoJogadorDois.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditarPlacar();
+            }
+        });
 
 
 
@@ -114,18 +167,6 @@ public class Truco extends AppCompatActivity {
 
                 //torna visivel
                 Visivel();
-
-                ResetarIcone.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        PtsUm = "0";
-                        PtsDois = "0";
-                        PontuacaoJogadorUm.setText("0");
-                        PontuacaoJogadorDois.setText("0");
-                        count = 0;
-                    }
-                });
-
 
                 SomaUm.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -375,7 +416,7 @@ public class Truco extends AppCompatActivity {
 
         Reset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+                public void onClick(View v) {
                 PtsUm = "0";
                 PtsDois = "0";
                 PontuacaoJogadorUm.setText("0");
@@ -398,6 +439,68 @@ public class Truco extends AppCompatActivity {
         }
         return ganhador;
     }
+
+
+
+    public void EditarPlacar() {
+
+        TelaEditar.setContentView(R.layout.activity_editar);
+
+        InputTimeAEditar = TelaEditar.findViewById(R.id.InputTimeAEditar);
+        InputTimeBEditar = TelaEditar.findViewById(R.id.InputTimeBEditar);
+
+        TimeAEditar = TelaEditar.findViewById(R.id.TimeAEditar);
+        TimeBEditar = TelaEditar.findViewById(R.id.TimeBEditar);
+
+        TimeAEditar.setText(JogadorUmPontuacao);
+        TimeBEditar.setText(JogadorDoisPontuacao);
+
+
+        InputTimeAEditar.setText(PtsUm);
+        InputTimeBEditar.setText(PtsDois);
+
+        Editar = TelaEditar.findViewById(R.id.Editar);
+
+        Editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String PtsConverterUm = String.valueOf(InputTimeAEditar.getText());
+                String PtsConverterDois = String.valueOf(InputTimeBEditar.getText());
+
+
+                PtsUm = PtsConverterUm;
+                PtsDois = PtsConverterDois;
+
+                PontuacaoJogadorUm.setText(PtsConverterUm);
+                PontuacaoJogadorDois.setText(PtsConverterDois);
+                //converter para integer para
+                int timeACompare = Integer.parseInt(String.valueOf(InputTimeAEditar.getText()));
+                int timeBCompare = Integer.parseInt(String.valueOf(InputTimeBEditar.getText()));
+
+                if(timeACompare > timeBCompare) {
+                    count = timeACompare;
+                    vencedor = JogadorUmPontuacao;
+                    Vitoria(vencedor);
+                } else if(timeBCompare > timeACompare) {
+                    count = timeBCompare;
+                    vencedor = JogadorDoisPontuacao;
+                    Vitoria(vencedor);
+                } else if(timeACompare == timeBCompare) {
+                    count = timeACompare;
+                }
+
+                TelaEditar.dismiss();
+            }
+        });
+
+
+
+        TelaEditar.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        TelaEditar.show();
+
+    }
+
 }
 
 
