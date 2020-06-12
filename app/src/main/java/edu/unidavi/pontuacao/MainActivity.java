@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         TimeUm = findViewById(R.id.JogadorUm);
         TimeDois = findViewById(R.id.TimeDois);
-        Comeca = findViewById(R.id.Comeca);
         Termina = findViewById(R.id.Termina);
         Jogo = findViewById(R.id.GrupoRadio);
         Cadastrar = findViewById(R.id.Cadastrar);

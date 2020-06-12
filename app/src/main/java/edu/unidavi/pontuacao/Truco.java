@@ -4,6 +4,7 @@ package edu.unidavi.pontuacao;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
 
 
 public class Truco extends AppCompatActivity {
@@ -43,7 +45,6 @@ public class Truco extends AppCompatActivity {
 
     Editable TimeUmAndroid = MainActivity.TimeUm.getText();
     final Editable TimeDoisAndroid = MainActivity.TimeDois.getText();
-    final Editable ComecaAndroid = MainActivity.Comeca.getText();
     final Editable TerminaAndroid = MainActivity.Termina.getText();
 
 
@@ -70,6 +71,12 @@ public class Truco extends AppCompatActivity {
     Dialog TelaEditar;
     private TextView EditarTruco;
 
+    //home
+    private TextView Home;
+
+    //terminar
+
+    int TerminaNumero = Integer.parseInt(String.valueOf(TerminaAndroid));
 
 
 
@@ -94,12 +101,12 @@ public class Truco extends AppCompatActivity {
 
 
         PontuacaoJogadorUm = findViewById(R.id.PontuacaoJogadorUm);
-        PtsUm = ComecaAndroid.toString();
+        PtsUm = "0";
         PontuacaoJogadorUm.setText(PtsUm);
 
 
         PontuacaoJogadorDois = findViewById(R.id.PontuacaoJogadorDois);
-        PtsDois = ComecaAndroid.toString();
+        PtsDois = "0";
         PontuacaoJogadorDois.setText(PtsDois);
 
 
@@ -138,6 +145,18 @@ public class Truco extends AppCompatActivity {
         });
 
 
+
+        Home = findViewById(R.id.Home);
+
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(Truco.this, MainActivity.class);
+                startActivity(it);
+            }
+        });
+
+
         EditarTruco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,8 +176,6 @@ public class Truco extends AppCompatActivity {
                 EditarPlacar();
             }
         });
-
-
 
         MarcoUm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -433,7 +450,7 @@ public class Truco extends AppCompatActivity {
 
     public String Vitoria(String vencedor) {
         String ganhador = "";
-        if(Integer.parseInt(PtsUm) >= 12 || Integer.parseInt(PtsDois) >= 12) {
+        if(Integer.parseInt(PtsUm) >= TerminaNumero || Integer.parseInt(PtsDois) >= TerminaNumero) {
             verPub();
             ganhador = vencedor;
         }
