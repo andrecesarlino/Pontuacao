@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="350dp"
+        android:layout_height="520dp"
+        tools:context=".Vitoria"
+        android:background="@color/Vitoria"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/Vitoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:text="Vítoria"
+            android:textAlignment="center"
+
+            android:textColor="@color/Preto"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/Trofeu"
+        android:layout_width="137dp"
+        android:layout_height="175dp"
+        android:layout_above="@+id/Parabens"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Vitoria"
+        app:srcCompat="@drawable/trofeu" />
+
+    <TextView
+        android:id="@+id/Parabens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TimeVencedor"
+        android:gravity="center_horizontal"
+        android:text="Parabéns"
+        android:textAlignment="center"
+        android:textColor="@color/Preto"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Trofeu" />
+
+    <TextView
+        android:id="@+id/TimeVencedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Vitoria"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/VerdeEscuro"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Parabens" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Resultado Final"
+        android:textAlignment="center"
+        android:textColor="@color/VerdeEscuro"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@+id/TimeVencedor"
+        tools:layout_editor_absoluteX="16dp" />
+    <TextView
+        android:id="@+id/TimeA"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_gravity=""
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text=""
+        android:textColor="@color/Preto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/ResultadoA"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/Preto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeA"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/TimeB"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/Preto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/ResultadoB"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_gravity=""
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/Preto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeB"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Reiniciar"
+        android:background="@color/VerdeEscuro"
+        android:textStyle="bold"
+        android:textColor="@color/ColorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResultadoB" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Truco">
+
+    <TextView
+        android:id="@+id/JogadorUm"
+        android:layout_width="192dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textColor="@color/ColorBlue"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/JogadorDois"
+        android:layout_width="192dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:textColor="@color/ColorRed"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/TextPTUm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Pontuação"
+        android:textColor="@color/ColorBlue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JogadorUm" />
+
+    <TextView
+        android:id="@+id/TextPTDois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:gravity="center"
+        android:text="Pontuação"
+        android:textColor="@color/ColorRed"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JogadorDois" />
+
+    <TextView
+        android:id="@+id/PontuacaoJogadorUm"
+        android:layout_width="192dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/ColorWhite"
+        android:background="@drawable/conerazul"
+        android:gravity="center"
+        android:text=""
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextPTUm"
+
+
+        />
+
+    <TextView
+        android:id="@+id/PontuacaoJogadorDois"
+        android:layout_width="192dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:textColor="@color/ColorWhite"
+        android:background="@drawable/corner"
+        android:gravity="center"
+        android:text=""
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextPTDois" />
+
+    <Button
+        android:id="@+id/SomaUm"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/ColorPastelUm"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="+1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/SomaTres"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/ColorPastelTres"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="+3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SomaUm"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/SomaSeis"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/ColorPastelSeis"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="+6"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SomaTres"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/SomaDoze"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/ColorPastelDoze"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="+12"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/SomaNove"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/SomaNove"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/ColorPastelNove"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="+9"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SomaSeis"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/MarcoUm"
+        android:layout_width="129dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/ColorBlue"
+        android:textColor="@color/ColorWhite"
+        android:text=""
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SomaTres"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/MarcoDois"
+        android:layout_width="129dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/ColorRed"
+        android:textColor="@color/ColorWhite"
+        android:text=""
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SomaNove"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/QuemMarcou"
+        android:layout_width="186dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Quem Marcou?"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/MarcoUm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Truco"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/ColorWhite"
+        android:background="@color/Preto"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        tools:layout_editor_absoluteX="-11dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <TextView
+        android:id="@+id/ResetarIcone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/restabelecer"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

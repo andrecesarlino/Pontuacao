@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#000839</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="ColorRed">#B22222</color>
+    <color name="ColorBlue">#1E90FF</color>
+    <color name="ColorWhite">#FFF</color>
+    <color name="ColorPastelUm">#F0F8FF</color>
+    <color name="ColorPastelTres">#F8F8FF</color>
+    <color name="ColorPastelSeis">#FFFAFA</color>
+    <color name="ColorPastelNove">#FFF5EE</color>
+    <color name="ColorPastelDoze">#FFFAF0</color>
+    <color name="Vitoria">#f4d03f</color>
+    <color name="Preto">#000</color>
+    <color name="VerdeEscuro"> #145a32 </color>
+
+</resources>
