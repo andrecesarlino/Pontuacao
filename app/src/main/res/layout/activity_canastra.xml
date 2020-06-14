@@ -7,14 +7,14 @@
     tools:context=".Truco">
 
     <TextView
-    android:id="@+id/textView6"
-    android:layout_width="377dp"
-    android:layout_height="159dp"
-    android:layout_marginTop="8dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    android:background="@color/azulclaro"
-    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:id="@+id/textView6"
+        android:layout_width="377dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/azulclaro"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
     <TextView
@@ -119,133 +119,176 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextPTDois" />
 
+
     <Button
-        android:id="@+id/SomaUm"
-        android:layout_width="50dp"
+        android:id="@+id/SomaDez"
+        android:layout_width="60dp"
         android:layout_height="50dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/ColorPastelUm"
-        android:textStyle="bold"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/ColorPastelTres"
+        android:text="+10"
         android:textSize="20sp"
-        android:text="+1"
+        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="invisible" />
 
     <Button
-        android:id="@+id/SomaQuinhentos"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/ColorPastelTres"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="+3"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/SomaUm"
-        tools:visibility="invisible" />
-
-    <Button
         android:id="@+id/SomaCinquenta"
-        android:layout_width="50dp"
+        android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/ColorPastelSeis"
-        android:textStyle="bold"
+        android:text="+50"
         android:textSize="20sp"
-        android:text="+6"
+        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/SomaQuinhentos"
+        app:layout_constraintStart_toEndOf="@+id/SomaDez"
         tools:visibility="invisible" />
 
     <Button
         android:id="@+id/SomaCem"
-        android:layout_width="50dp"
+        android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/ColorPastelDoze"
-        android:textStyle="bold"
+        android:text="+100"
         android:textSize="20sp"
-        android:text="+12"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/SomaNove"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/SomaNove"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/ColorPastelNove"
         android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="+9"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/SomaCinquenta"
         tools:visibility="invisible" />
 
     <Button
-        android:id="@+id/MarcoUm"
-        android:layout_width="129dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/conerazul"
-        android:textColor="@color/ColorWhite"
-        android:text=""
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/SomaQuinhentos"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/MarcoDois"
-        android:layout_width="129dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="12dp"
-        android:textColor="@color/ColorWhite"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:background="@drawable/corner"
         android:text=""
+        android:textColor="@color/ColorWhite"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/SomaNove"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuemMarcou" />
 
     <TextView
         android:id="@+id/QuemMarcou"
         android:layout_width="186dp"
         android:layout_height="33dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="120dp"
         android:gravity="center"
         android:text="Quem Marcou?"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/MarcoUm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/MarcoUm"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/conerazul"
+        android:text=""
+        android:textColor="@color/ColorWhite"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuemMarcou" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/InputPontuacao"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="16dp"
+        android:hint="Valor"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marcoTres" />
+
+    <Button
+        android:id="@+id/Pontuar"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:background="@color/VerdeEscuro"
+        android:text="Marcar"
+        android:textColor="@color/ColorWhite"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintStart_toEndOf="@+id/InputPontuacao"
+        app:layout_constraintTop_toBottomOf="@+id/MarcoDois" />
+
+    <Button
+        android:id="@+id/marcoTres"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:background="@drawable/corner"
+        android:text=""
+        android:textColor="@color/ColorWhite"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/MarcoDois"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toEndOf="@+id/MarcoUm"
+        app:layout_constraintTop_toBottomOf="@+id/QuemMarcou" />
+
+    <Button
+        android:id="@+id/SomaQuinhentos"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/ColorPastelUm"
+        android:text="+500"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SomaCem"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/SomaMil"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/ColorPastelUm"
+        android:text="+1000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SomaQuinhentos"
+        tools:visibility="invisible" />
 
     <TextView
         android:id="@+id/textView2"
@@ -254,7 +297,7 @@
         android:background="@color/Preto"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
-        android:text="Truco"
+        android:text="Canastra"
         android:textColor="@color/ColorWhite"
         android:textSize="30sp"
         android:textStyle="bold"

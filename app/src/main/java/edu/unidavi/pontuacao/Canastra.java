@@ -1,6 +1,5 @@
 package edu.unidavi.pontuacao;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -13,8 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
-public class Truco extends AppCompatActivity {
+public class Canastra extends AppCompatActivity {
 
     Dialog testeDialogo;
 
@@ -30,11 +28,11 @@ public class Truco extends AppCompatActivity {
     private String PtsDois;
     private TextView PontuacaoJogadorDois;
 
-   private Button SomaUm;
-    private Button SomaTres;
-    private Button SomaSeis;
-    private Button SomaNove;
-    private Button SomaDoze;
+    private Button SomaDez;
+    private Button SomaCinquenta;
+    private Button SomaCem;
+    private Button SomaQuinhentos;
+    private Button SomaMil;
     private Button MarcoUm;
     private Button MarcoDois;
 
@@ -77,12 +75,19 @@ public class Truco extends AppCompatActivity {
     int TerminaNumero = Integer.parseInt(String.valueOf(TerminaAndroid));
 
 
+    // Pontuar
+    public Button Pontuar;
+    public TextView InputPontuacao;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_truco);
+        setContentView(R.layout.activity_canastra);
+
+        //Pontuar
+        Pontuar = findViewById(R.id.Pontuar);
+        InputPontuacao = findViewById(R.id.InputPontuacao);
 
         testeDialogo = new Dialog(this);
 
@@ -108,11 +113,11 @@ public class Truco extends AppCompatActivity {
         PontuacaoJogadorDois.setText(PtsDois);
 
 
-        SomaUm = findViewById(R.id.SomaUm);
-        SomaTres = findViewById(R.id.SomaQuinhentos);
-        SomaSeis = findViewById(R.id.SomaCinquenta);
-        SomaNove = findViewById(R.id.SomaNove);
-        SomaDoze = findViewById(R.id.SomaCem);
+        SomaDez = findViewById(R.id.SomaDez);
+        SomaCinquenta = findViewById(R.id.SomaCinquenta);
+        SomaCem = findViewById(R.id.SomaCem);
+        SomaQuinhentos = findViewById(R.id.SomaQuinhentos);
+        SomaMil = findViewById(R.id.SomaMil);
 
         MarcoUm = findViewById(R.id.MarcoUm);
         MarcoDois = findViewById(R.id.MarcoDois);
@@ -127,6 +132,7 @@ public class Truco extends AppCompatActivity {
 
         //button editar
         EditarTruco = findViewById(R.id.EditarTruco);
+
 
 
 
@@ -149,10 +155,12 @@ public class Truco extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(Truco.this, MainActivity.class);
+                Intent it = new Intent(Canastra.this, MainActivity.class);
                 startActivity(it);
             }
         });
+
+
 
 
         EditarTruco.setOnClickListener(new View.OnClickListener() {
@@ -179,108 +187,91 @@ public class Truco extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 //torna visivel
                 Visivel();
 
-                SomaUm.setOnClickListener(new View.OnClickListener() {
+                InputPontuacao.setText("0");
+
+
+                SomaDez.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //CONCATENA
-                        //PtsUm = PtsUm + 1;
-                        //PontuacaoJogadorUm.setText(PtsUm);
 
-                        int numero = Integer.parseInt(PtsUm);
-                        numero = numero + 1;
-                        PtsUm = String.valueOf(numero);
-                        PontuacaoJogadorUm.setText(PtsUm);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 10;
+                        InputPontuacao.setText(String.valueOf(numero));
 
-                        //torna invisivel
-                        Invisivel();
-                        count = count + 1;
-                       // Log.d("tag ", "count "+ count);
-                        vencedor = JogadorUmPontuacao;
-                        Vitoria(vencedor);
 
                     }
                 });
 
-                SomaTres.setOnClickListener(new View.OnClickListener() {
+                SomaCinquenta.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsUm);
-                        numero = numero + 3;
-                        PtsUm = String.valueOf(numero);
-                        PontuacaoJogadorUm.setText(PtsUm);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 50;
+                        InputPontuacao.setText(String.valueOf(numero));
+                    }
+                });
 
-                        Invisivel();
-                        count = count + 3;
+                SomaCem.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                        vencedor = JogadorUmPontuacao;
-                        Vitoria(vencedor);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 100;
+                        InputPontuacao.setText(String.valueOf(numero));
 
                     }
                 });
 
-                SomaSeis.setOnClickListener(new View.OnClickListener() {
+                SomaQuinhentos.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsUm);
-                        numero = numero + 6;
-                        PtsUm = String.valueOf(numero);
-                        PontuacaoJogadorUm.setText(PtsUm);
-
-                        Invisivel();
-                        count = count + 6;
-
-                        vencedor = JogadorUmPontuacao;
-                        Vitoria(vencedor);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 500;
+                        InputPontuacao.setText(String.valueOf(numero));
 
                     }
                 });
 
-                SomaNove.setOnClickListener(new View.OnClickListener() {
+                SomaMil.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsUm);
-                        numero = numero + 9;
-                        PtsUm = String.valueOf(numero);
-                        PontuacaoJogadorUm.setText(PtsUm);
-
-                        Invisivel();
-
-                        count = count + 9;
-
-                        vencedor = JogadorUmPontuacao;
-                        Vitoria(vencedor);
-
-                    }
-                });
-
-                SomaDoze.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        int numero = Integer.parseInt(PtsUm);
-                        numero = numero + 12;
-                        PtsUm = String.valueOf(numero);
-                        PontuacaoJogadorUm.setText(PtsUm);
-
-                        Invisivel();
-
-                        count = count + 12;
-
-                        vencedor = JogadorUmPontuacao;
-                        Vitoria(vencedor);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 1000;
+                        InputPontuacao.setText(String.valueOf(numero));
 
                     }
 
                 });
 
+                Pontuar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
+                        int Soma = Integer.parseInt(String.valueOf(InputPontuacao.getText()));
+
+                        PtsUm = String.valueOf(Integer.valueOf(PtsUm) + Soma);
+
+                        PontuacaoJogadorUm.setText(PtsUm);
+
+                        int conteudo = Integer.parseInt(String.valueOf(PtsUm));
+                        count = count + conteudo;
+
+
+                        Invisivel();
+                        vencedor = JogadorUmPontuacao;
+                        Vitoria(vencedor);
+
+                        InputPontuacao.setText("");
+
+
+                    }
+                });
 
             }
         });
@@ -292,100 +283,84 @@ public class Truco extends AppCompatActivity {
                 //torna visivel
                 Visivel();
 
-                SomaUm.setOnClickListener(new View.OnClickListener() {
+                InputPontuacao.setText("0");
+
+                SomaDez.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsDois);
-                        numero = numero + 1;
-                        PtsDois = String.valueOf(numero);
-                        PontuacaoJogadorDois.setText(PtsDois);
-
-                        //torna invisivel
-                        Invisivel();
-
-                        count = count + 1;
-
-                        vencedor = JogadorDoisPontuacao;
-                        Vitoria(vencedor);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 10;
+                        InputPontuacao.setText(String.valueOf(numero));
 
 
                     }
                 });
 
 
-                SomaTres.setOnClickListener(new View.OnClickListener() {
+                SomaCinquenta.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsDois);
-                        numero = numero + 3;
-                        PtsDois = String.valueOf(numero);
-                        PontuacaoJogadorDois.setText(PtsDois);
-
-                        Invisivel();
-
-                        count = count + 3;
-
-                        vencedor = JogadorDoisPontuacao;
-                        Vitoria(vencedor);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 50;
+                        InputPontuacao.setText(String.valueOf(numero));
 
                     }
                 });
 
-                SomaSeis.setOnClickListener(new View.OnClickListener() {
+                SomaCem.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsDois);
-                        numero = numero + 6;
-                        PtsDois = String.valueOf(numero);
-                        PontuacaoJogadorDois.setText(PtsDois);
-
-                        Invisivel();
-
-                        count = count + 6;
-
-                        vencedor = JogadorDoisPontuacao;
-                        Vitoria(vencedor);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 100;
+                        InputPontuacao.setText(String.valueOf(numero));
 
                     }
                 });
 
-                SomaNove.setOnClickListener(new View.OnClickListener() {
+                SomaQuinhentos.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsDois);
-                        numero = numero + 9;
-                        PtsDois = String.valueOf(numero);
-                        PontuacaoJogadorDois.setText(PtsDois);
-
-                        Invisivel();
-
-                        count = count + 9;
-
-                        vencedor = JogadorDoisPontuacao;
-                        Vitoria(vencedor);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 500;
+                        InputPontuacao.setText(String.valueOf(numero));
 
                     }
                 });
 
-                SomaDoze.setOnClickListener(new View.OnClickListener() {
+                SomaMil.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        int numero = Integer.parseInt(PtsDois);
-                        numero = numero + 12;
-                        PtsDois = String.valueOf(numero);
+                        int numero = Integer.valueOf(String.valueOf(InputPontuacao.getText()));
+                        numero = numero + 1000;
+                        InputPontuacao.setText(String.valueOf(numero));
+                    }
+                });
+
+                Pontuar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        int Soma = Integer.parseInt(String.valueOf(InputPontuacao.getText()));
+
+                        PtsDois = String.valueOf(Integer.valueOf(PtsDois) + Soma);
+
                         PontuacaoJogadorDois.setText(PtsDois);
 
+                        int conteudo = Integer.parseInt(String.valueOf(PtsDois));
+                        count = count + conteudo;
+
+
                         Invisivel();
-
-                        count = count + 12;
-
                         vencedor = JogadorDoisPontuacao;
                         Vitoria(vencedor);
+
+                        InputPontuacao.setText("");
+
 
                     }
                 });
@@ -395,19 +370,23 @@ public class Truco extends AppCompatActivity {
     }
 
     public void Invisivel() {
-        SomaUm.setVisibility(View.INVISIBLE);
-        SomaTres.setVisibility(View.INVISIBLE);
-        SomaSeis.setVisibility(View.INVISIBLE);
-        SomaNove.setVisibility(View.INVISIBLE);
-        SomaDoze.setVisibility(View.INVISIBLE);
+        SomaDez.setVisibility(View.INVISIBLE);
+        SomaCinquenta.setVisibility(View.INVISIBLE);
+        SomaCem.setVisibility(View.INVISIBLE);
+        SomaQuinhentos.setVisibility(View.INVISIBLE);
+        SomaMil.setVisibility(View.INVISIBLE);
+        Pontuar.setVisibility(View.INVISIBLE);
+        InputPontuacao.setVisibility(View.INVISIBLE);
     }
 
     public void Visivel() {
-        SomaUm.setVisibility(View.VISIBLE);
-        SomaTres.setVisibility(View.VISIBLE);
-        SomaSeis.setVisibility(View.VISIBLE);
-        SomaNove.setVisibility(View.VISIBLE);
-        SomaDoze.setVisibility(View.VISIBLE);
+        SomaDez.setVisibility(View.VISIBLE);
+        SomaCinquenta.setVisibility(View.VISIBLE);
+        SomaCem.setVisibility(View.VISIBLE);
+        SomaQuinhentos.setVisibility(View.VISIBLE);
+        SomaMil.setVisibility(View.VISIBLE);
+        Pontuar.setVisibility(View.VISIBLE);
+        InputPontuacao.setVisibility(View.VISIBLE);
     }
 
     public void verPub() {
@@ -431,7 +410,7 @@ public class Truco extends AppCompatActivity {
 
         Reset.setOnClickListener(new View.OnClickListener() {
             @Override
-                public void onClick(View v) {
+            public void onClick(View v) {
                 PtsUm = "0";
                 PtsDois = "0";
                 PontuacaoJogadorUm.setText("0");
@@ -454,8 +433,6 @@ public class Truco extends AppCompatActivity {
         }
         return ganhador;
     }
-
-
 
     public void EditarPlacar() {
 
@@ -515,7 +492,4 @@ public class Truco extends AppCompatActivity {
         TelaEditar.show();
 
     }
-
-}
-
-
+    }
