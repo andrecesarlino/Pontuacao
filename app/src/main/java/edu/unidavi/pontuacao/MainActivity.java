@@ -48,17 +48,17 @@ public class MainActivity extends AppCompatActivity {
         GrupoRadio = (RadioGroup) findViewById(R.id.GrupoRadio);
 
         //jogador novo
-        TerceiroJogador = findViewById(R.id.TerceiroJogador);
-        NomeTerceiro = findViewById(R.id.NomeTerceiro);
+        //TerceiroJogador = findViewById(R.id.TerceiroJogador);
+        //NomeTerceiro = findViewById(R.id.NomeTerceiro);
 
-        TerceiroJogador.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                NomeTerceiro.setVisibility(View.VISIBLE);
-
-            }
-        });
+//        TerceiroJogador.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                NomeTerceiro.setVisibility(View.VISIBLE);
+//
+//            }
+//        });
 
 
 
